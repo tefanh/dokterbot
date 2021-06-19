@@ -1,0 +1,7 @@
+<div appMaxHeight>
+  <app-navbar #navbar></app-navbar>
+  <div id="main" #main [scrollTop]="scrollTop">
+    <app-chat-box [from]="chat.from" [message]="chat.message" *ngFor="let chat of chats"></app-chat-box>
+  </div>
+  <app-footer></app-footer>
+</div>

@@ -1,0 +1,38 @@
+div#row {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    overflow: hidden;
+}
+
+div#container {
+    padding: 15px 20px;
+    color: #ffffff;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    width: fit-content;
+    font-size: 14px;
+    letter-spacing: 0.4px; 
+    p {
+        line-height: 20px;
+    }
+}
+
+.receiver {
+    div#container {
+        p {
+            margin-top: 0px !important;
+        }
+    }
+}
+
+.sender {
+    justify-content: flex-end !important;
+    div#container {
+        color: #757575 !important;
+        p {
+            margin-top: 0px !important;
+            margin-bottom: 0px !important;
+        }
+    }
+}

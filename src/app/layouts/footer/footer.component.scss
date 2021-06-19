@@ -1,0 +1,25 @@
+:host div#container div.row {
+    position: sticky;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    align-items: center;
+
+    &:first-of-type {
+        margin-bottom: 30px;
+    }
+
+    button {
+        flex-basis: 180px;
+        height: 50px;
+    }
+}
+
+:host div#container {
+    padding: 50px 0 40px 0;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}

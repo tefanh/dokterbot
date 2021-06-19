@@ -1,0 +1,5 @@
+<div id="row" [class]="from">
+    <div id="container"  [@inOut]="from" [class.bg-primary]="from === 'receiver'" [class.bg-grey]="from === 'sender'">
+        <p>{{message}}</p>
+    </div>    
+</div>

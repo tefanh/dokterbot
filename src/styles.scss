@@ -1,0 +1,39 @@
+/* You can add global styles to this file, and also import other style files */
+
+@import '~@angular/material/theming';
+@include mat-core();
+$global-primary: mat-palette($mat-light-blue, A700);
+$global-accent: mat-palette($mat-light-blue, A100);
+$global-warn: mat-palette($mat-red);
+$global-theme: mat-light-theme($global-primary, $global-accent, $global-warn);
+@include angular-material-theme($global-theme);
+
+.primary {
+    color: #0091ea;
+}
+
+.bg-primary {
+    background-color: #0091ea;
+}
+
+.grey {
+    color: #e0e0e0;
+}
+
+.bg-grey {
+    background-color: #e0e0e0;
+}
+
+.mat-button.mat-grey {
+  background: #e0e0e0;
+}
+
+html, body {
+    height: 100%;
+    box-sizing: border-box !important;
+}
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+* {
+    box-sizing: inherit !important;
+}

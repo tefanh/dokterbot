@@ -1,0 +1,19 @@
+div {
+    margin-left: 20px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.title-container {
+    line-height: 17px !important;
+    span {
+        small {
+            font-weight: 350;
+            font-size: 11px;
+        }
+    }
+}

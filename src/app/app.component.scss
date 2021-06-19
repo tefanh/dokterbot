@@ -1,0 +1,15 @@
+:host div[appMaxHeight] {
+    height: 100vh !important;
+    overflow: hidden !important;
+    margin: 0 auto !important;
+}
+
+#main {
+    padding: 30px 30px 150px 30px;
+}
+
+@media screen and (min-width: 600px) {
+    :host div[appMaxHeight] {
+        width: 600px !important;
+    }
+}
