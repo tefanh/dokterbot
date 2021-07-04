@@ -11,21 +11,33 @@ export class AppComponent implements AfterViewInit {
   scrollTop: number | null = null;
   chats: Chat[] = [];
 
+  i: number = 0;
+
   ngAfterViewInit() {
     this.load();
   }
 
   private async load() {
-    let i = 0;
-    while(true) {
-      if (i <= raws.length - 1) {
-        await this.delayedAdd(raws[i++]);
-      } else {
-        i = 0;
-        // this.chats = [];
-      }
-      this.scrollTop = this.main.nativeElement.scrollHeight;
+    // let i = 0;
+    // while(true) {
+    //   if (i <= raws.length - 1) {
+    //     await this.delayedAdd(raws[i++]);
+    //   } else {
+    //     i = 0;
+    //     // this.chats = [];
+    //   }
+    //   this.scrollTop = this.main.nativeElement.scrollHeight;
+    // }
+  }
+
+  async addChat() {
+    if (this.i <= raws.length - 1) {
+      await this.delayedAdd(raws[this.i++]);
+    } else {
+      this.i = 0;
+      // this.chats = [];
     }
+    this.scrollTop = this.main.nativeElement.scrollHeight;
   }
 
   private delayedAdd(chat: Chat): Promise<string> {
@@ -33,7 +45,7 @@ export class AppComponent implements AfterViewInit {
       setTimeout(() => {
         this.chats.push(chat);
         resolve('chat added');
-      }, 1000);
+      }, 10);
     });
   }
 }

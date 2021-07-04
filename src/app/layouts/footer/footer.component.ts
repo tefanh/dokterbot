@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output } from '@angular/core';
 import { trigger, state, transition, animate, style } from '@angular/animations';
+import { EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-footer',
@@ -20,10 +21,15 @@ import { trigger, state, transition, animate, style } from '@angular/animations'
   ]
 })
 export class FooterComponent implements OnInit {
+  @Output('addChat') addChatEv = new EventEmitter<boolean>();
 
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  addChat() {
+    this.addChatEv.emit(true);
   }
 
 }
