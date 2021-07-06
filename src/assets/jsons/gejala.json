@@ -1,0 +1,42 @@
+[
+    {
+        "id": 1,
+        "name": "demam"
+    },
+    {
+        "id": 2,
+        "name": "menggigil"
+    },
+    {
+        "id": 3,
+        "name": "nyeri otot"
+    },
+    {
+        "id": 4,
+        "name": "batuk"
+    },
+    {
+        "id": 5,
+        "name": "pilek"
+    },
+    {
+        "id": 6,
+        "name": "sakit kepala"
+    },
+    {
+        "id": 7,
+        "name": "kelelahan"
+    },
+    {
+        "id": 8,
+        "name": "tidak enak badan"
+    },
+    {
+        "id": 9,
+        "name": "lemas"
+    },
+    {
+        "id": 10,
+        "name": "berkeringat"
+    }
+]

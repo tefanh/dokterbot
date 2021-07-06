@@ -1,15 +1,29 @@
+:host {
+    overflow: auto !important;
+}
+
 :host div[appMaxHeight] {
     height: 100vh !important;
     overflow: hidden !important;
-    margin: 0 auto !important;
+    float: right;
+}
+
+:host #background {
+    width: calc(100vw - 500px) !important;
+    height: 100vh;
+    float: left;
+    background: url('../assets/imgs/background.png');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-position: right
 }
 
 #main {
-    padding: 30px 30px 150px 30px;
+    padding: 30px 30px 100px 30px;
 }
 
 @media screen and (min-width: 600px) {
     :host div[appMaxHeight] {
-        width: 600px !important;
+        width: 500px !important;
     }
 }

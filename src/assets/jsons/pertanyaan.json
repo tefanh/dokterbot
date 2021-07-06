@@ -1,0 +1,26 @@
+[
+    {
+        "id": 1,
+        "pertanyaan": "gejala apa yg anda rasakan?",
+        "repeatable": false,
+        "end": false
+    },
+    {
+        "id": 2,
+        "pertanyaan": "ada lagi?",
+        "repeatable": true,
+        "end": false
+    },
+    {
+        "id": 3,
+        "pertanyaan": "sudah berapa lama gejala yg anda alami?",
+        "repeatable": false,
+        "end": false
+    },
+    {
+        "id": 4,
+        "pertanyaan": "mungkin anda mengalami {penyakit}, segera periksa ke rumah sakit terdekat!|anda sepertinya sehat wal'afiat",
+        "repeatable": false,
+        "end": true
+    }
+]

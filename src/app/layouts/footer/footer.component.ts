@@ -1,6 +1,7 @@
-import { Component, OnInit, Output } from '@angular/core';
+import { Component, Input, OnInit, Output } from '@angular/core';
 import { trigger, state, transition, animate, style } from '@angular/animations';
 import { EventEmitter } from '@angular/core';
+import { Gejala } from 'src/app/shared/model/gejala.model';
 
 @Component({
   selector: 'app-footer',
@@ -21,15 +22,13 @@ import { EventEmitter } from '@angular/core';
   ]
 })
 export class FooterComponent implements OnInit {
-  @Output('addChat') addChatEv = new EventEmitter<boolean>();
+  @Input('gejalas') gejalas!: Gejala[];
+  @Input('end') end!: boolean;
+  @Output('answer') answer = new EventEmitter<Gejala | string>();
 
   constructor() { }
 
   ngOnInit(): void {
-  }
-
-  addChat() {
-    this.addChatEv.emit(true);
   }
 
 }

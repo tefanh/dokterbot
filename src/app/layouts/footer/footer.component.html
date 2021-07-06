@@ -1,10 +1,9 @@
-<div id="container" class="bg-primary" @inOut>
+<div id="container" class="bg-primary">
     <div class="row">
-        <button type="button" mat-flat-button color="accent" (click)="addChat()">5 - 7 hari</button>
-        <button type="button" mat-flat-button color="accent" (click)="addChat()">5 - 7 hari</button>
+        <ng-template #normal>
+            <button type="button" mat-flat-button color="accent" (click)="answer.emit('tidak_ada')">Tidak Ada</button>
+            <button type="button" mat-flat-button color="accent" (click)="answer.emit(gejala)" *ngFor="let gejala of gejalas">{{gejala.name}}</button>
+        </ng-template>
+        <button type="button" mat-flat-button color="accent" *ngIf="end; else normal" (click)="answer.emit('tanya_ulang')">Tanya Ulang</button>
     </div>
-    <div class="row">
-        <button type="button" mat-flat-button color="accent" (click)="addChat()">5 - 7 hari</button>
-        <button type="button" mat-flat-button color="accent" (click)="addChat()">5 - 7 hari</button>
-    </div>  
 </div>

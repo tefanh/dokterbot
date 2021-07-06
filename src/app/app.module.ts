@@ -3,6 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { HttpClientModule } from '@angular/common/http';
 
 import { LayoutsModule } from './layouts/layouts.module';
 import { ComponentsModule } from './components/components.module';
@@ -19,6 +20,7 @@ const matModules: any[] = [
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
+    HttpClientModule,
     LayoutsModule,
     ComponentsModule,
     DirectivesModule,
